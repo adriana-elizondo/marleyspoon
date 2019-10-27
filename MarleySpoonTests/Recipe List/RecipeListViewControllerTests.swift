@@ -22,6 +22,7 @@ class RecipeListViewControllerTests: XCTestCase {
     override func setUp() {
         viewController = RecipeListViewController(with: mockCollectionView,
                                                   activityIndicator: mockActivityIndicatorView,
+                                                  refreshButton: UIButton(type: .close),
                                                   presenter: RecipeListPresenter(),
                                                   and: RecipeListInteractor(with: MockRecipeListWorker()))
         // Put setup code here. This method is called before the invocation of each test method in the class.

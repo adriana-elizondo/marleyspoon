@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="activityIndicator" destination="kmz-ju-V9j" id="Jsu-6g-OlA"/>
                 <outlet property="collectionView" destination="llV-TA-81w" id="cqi-cz-eUt"/>
+                <outlet property="refreshButton" destination="hnf-h8-zQE" id="TsI-lx-iZE"/>
                 <outlet property="view" destination="iN0-l3-epB" id="AoZ-jm-5Xk"/>
             </connections>
         </placeholder>
@@ -23,7 +24,18 @@
                     <rect key="frame" x="197" y="443" width="20" height="20"/>
                     <color key="color" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </activityIndicatorView>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="llV-TA-81w">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnf-h8-zQE">
+                    <rect key="frame" x="187" y="433" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="66M-T9-RtT"/>
+                        <constraint firstAttribute="height" constant="40" id="v9V-4D-BGs"/>
+                    </constraints>
+                    <state key="normal" image="refresh"/>
+                    <connections>
+                        <action selector="refreshTapped:" destination="-1" eventType="touchUpInside" id="YKT-cx-Htr"/>
+                    </connections>
+                </button>
+                <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="llV-TA-81w">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="ljo-Pa-Mmc">
@@ -43,12 +55,17 @@
                 <constraint firstItem="kmz-ju-V9j" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="8FK-gI-CcK"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="llV-TA-81w" secondAttribute="trailing" id="FLL-TN-dPK"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="llV-TA-81w" secondAttribute="bottom" id="GsG-QK-y9U"/>
+                <constraint firstItem="hnf-h8-zQE" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="JGy-aY-XBX"/>
                 <constraint firstItem="kmz-ju-V9j" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="MCp-6Z-Kg9"/>
                 <constraint firstItem="llV-TA-81w" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Q0Z-8h-9WH"/>
                 <constraint firstItem="llV-TA-81w" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SDB-eW-3K4"/>
+                <constraint firstItem="hnf-h8-zQE" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="d02-FF-0My"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="151.33928571428569"/>
         </view>
     </objects>
+    <resources>
+        <image name="refresh" width="170.66667175292969" height="170.66667175292969"/>
+    </resources>
 </document>

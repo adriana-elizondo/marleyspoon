@@ -44,4 +44,10 @@ struct MockData {
                                                   tags: nil,
                                                   photo: nil,
                                                   chef: nil)]
+    static let singleRecipe = RecipeItem.Recipe(title: "Test recipe",
+    calories: 100,
+    description: "test description",
+    tags: nil,
+    photo: nil,
+    chef: nil)
 }

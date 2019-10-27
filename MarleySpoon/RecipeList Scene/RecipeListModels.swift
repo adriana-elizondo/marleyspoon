@@ -72,3 +72,18 @@ struct RecipeItem: Codable {
         var name: String?
     }
 }
+
+extension RecipeItem.Recipe {
+    var tagsString: String {
+        guard let tags = tags else { return "" }
+        var tagsString = ""
+        for (index, tag) in tags.enumerated() {
+            tagsString += tag.name ?? ""
+            if index < tags.count - 1 { tagsString += ", "}
+        }
+        return tagsString
+    }
+    var chefName: String {
+        return chef?.name ?? ""
+    }
+}

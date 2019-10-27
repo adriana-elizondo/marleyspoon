@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class RecipeCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var recipeImage: UIImageView!
@@ -15,16 +16,9 @@ class RecipeCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var tagsLabel: UILabel!
     func setup(with recipe: RecipeItem.Recipe) {
         if let url = URL(string: recipe.photo?.file?.url ?? "") {
-            recipeImage.setImage(from: url)
+            recipeImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"))
         }
         recipeTitle.text = recipe.title
-        tagsLabel.text = ""
-        guard let tags = recipe.tags else { return }
-        var tagsString = ""
-        for (index, tag) in tags.enumerated() {
-            tagsString += tag.name ?? ""
-            if index < tags.count - 1 { tagsString += ", "}
-        }
-        tagsLabel.text = tagsString
+        tagsLabel.text = recipe.tagsString
     }
 }

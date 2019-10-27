@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,6 +32,10 @@
 		265503672365990400EE186E /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265503662365990400EE186E /* MockData.swift */; };
 		2655036923659D8000EE186E /* RecipeListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2655036823659D8000EE186E /* RecipeListPresenterTests.swift */; };
 		2655036B23659EA500EE186E /* RecipeListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2655036A23659EA500EE186E /* RecipeListViewControllerTests.swift */; };
+		2655036E2365A3DC00EE186E /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2655036D2365A3DC00EE186E /* RecipeDetailViewController.swift */; };
+		265503742365A40500EE186E /* RecipeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 265503732365A40500EE186E /* RecipeDetailViewController.xib */; };
+		265503772365B79A00EE186E /* RecipeDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265503762365B79A00EE186E /* RecipeDetailViewControllerTests.swift */; };
+		26BD20C82365BF9B003DEE39 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 26BD20C72365BF9B003DEE39 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		265503662365990400EE186E /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		2655036823659D8000EE186E /* RecipeListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListPresenterTests.swift; sourceTree = "<group>"; };
 		2655036A23659EA500EE186E /* RecipeListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewControllerTests.swift; sourceTree = "<group>"; };
+		2655036D2365A3DC00EE186E /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		265503732365A40500EE186E /* RecipeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailViewController.xib; sourceTree = "<group>"; };
+		265503762365B79A00EE186E /* RecipeDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		265503792365B99100EE186E /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26BD20C82365BF9B003DEE39 /* SDWebImage in Frameworks */,
 				2655031223655E3800EE186E /* libNetworkLayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +138,7 @@
 				2655032B2365750200EE186E /* Global.swift */,
 				265503262365701100EE186E /* API Services */,
 				2655031623655E9100EE186E /* RecipeList Scene */,
+				2655036C2365A3BC00EE186E /* RecipeDetail Scene */,
 				265502E823655D0E00EE186E /* AppDelegate.swift */,
 				265502EA23655D0E00EE186E /* SceneDelegate.swift */,
 				265502EC23655D0E00EE186E /* ViewController.swift */,
@@ -145,6 +155,7 @@
 			children = (
 				265503662365990400EE186E /* MockData.swift */,
 				26550363236598B500EE186E /* Recipe List */,
+				265503752365B4D600EE186E /* RecipeDetail */,
 				265502FF23655D0F00EE186E /* MarleySpoonTests.swift */,
 				2655030123655D0F00EE186E /* Info.plist */,
 			);
@@ -162,6 +173,7 @@
 		2655031123655E3800EE186E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				265503792365B99100EE186E /* Kingfisher.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -217,6 +229,23 @@
 			path = "Recipe List";
 			sourceTree = "<group>";
 		};
+		2655036C2365A3BC00EE186E /* RecipeDetail Scene */ = {
+			isa = PBXGroup;
+			children = (
+				2655036D2365A3DC00EE186E /* RecipeDetailViewController.swift */,
+				265503732365A40500EE186E /* RecipeDetailViewController.xib */,
+			);
+			path = "RecipeDetail Scene";
+			sourceTree = "<group>";
+		};
+		265503752365B4D600EE186E /* RecipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				265503762365B79A00EE186E /* RecipeDetailViewControllerTests.swift */,
+			);
+			path = RecipeDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,13 +256,15 @@
 				265502E123655D0E00EE186E /* Sources */,
 				265502E223655D0E00EE186E /* Frameworks */,
 				265502E323655D0E00EE186E /* Resources */,
-				2655032323655F3500EE186E /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MarleySpoon;
+			packageProductDependencies = (
+				26BD20C72365BF9B003DEE39 /* SDWebImage */,
+			);
 			productName = MarleySpoon;
 			productReference = 265502E523655D0E00EE186E /* MarleySpoon.app */;
 			productType = "com.apple.product-type.application";
@@ -284,6 +315,9 @@
 				Base,
 			);
 			mainGroup = 265502DC23655D0E00EE186E;
+			packageReferences = (
+				26BD20C62365BF9B003DEE39 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 265502E623655D0E00EE186E /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -316,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2655031A23655ECA00EE186E /* RecipeListViewController.xib in Resources */,
+				265503742365A40500EE186E /* RecipeDetailViewController.xib in Resources */,
 				265502F523655D0F00EE186E /* LaunchScreen.storyboard in Resources */,
 				265502F223655D0F00EE186E /* Assets.xcassets in Resources */,
 				265503622365896D00EE186E /* RecipeCollectionViewCell.xib in Resources */,
@@ -331,26 +366,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2655032323655F3500EE186E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		265502E123655D0E00EE186E /* Sources */ = {
@@ -370,6 +385,7 @@
 				2655032C2365750200EE186E /* Global.swift in Sources */,
 				265502E923655D0E00EE186E /* AppDelegate.swift in Sources */,
 				265502EB23655D0E00EE186E /* SceneDelegate.swift in Sources */,
+				2655036E2365A3DC00EE186E /* RecipeDetailViewController.swift in Sources */,
 				2655032223655F0300EE186E /* RecipeListWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2655036923659D8000EE186E /* RecipeListPresenterTests.swift in Sources */,
+				265503772365B79A00EE186E /* RecipeDetailViewControllerTests.swift in Sources */,
 				26550365236598D100EE186E /* RecipeListInteractorTests.swift in Sources */,
 				265503672365990400EE186E /* MockData.swift in Sources */,
 				2655030023655D0F00EE186E /* MarleySpoonTests.swift in Sources */,
@@ -537,6 +554,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W3RCCUG568;
 				INFOPLIST_FILE = MarleySpoon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,6 +573,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W3RCCUG568;
 				INFOPLIST_FILE = MarleySpoon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -641,6 +660,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		26BD20C62365BF9B003DEE39 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		26BD20C72365BF9B003DEE39 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26BD20C62365BF9B003DEE39 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 265502DD23655D0E00EE186E /* Project object */;
 }

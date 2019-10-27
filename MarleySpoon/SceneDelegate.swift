@@ -16,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let recipeListController = RecipeListViewController(with: RecipeListPresenter(),
                                                             and: RecipeListInteractor(with: ReciperListWorker()))
         let navigationController = UINavigationController(rootViewController: recipeListController)
+        navigationController.navigationBar.isTranslucent = false
         recipeListController.setupRouter(with: RecipeListRouter(with: navigationController))
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
