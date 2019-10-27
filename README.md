@@ -1,7 +1,7 @@
 # Marley Spoon
 
 This repository contains a simple app displaying a list of recipes and details for these recipes.
-The project was done using Xcode 11.2 and the target iOS version is 13.\  
+The project was done using Xcode 11.2 and the target iOS version is 13.    
 The project includes a dependency -> SDWebImage (https://github.com/SDWebImage/SDWebImage) used to download and cache images.  
 The project includes a submodule -> NetworkLayer (https://github.com/adriana-elizondo/networklayer) used for networking.  
 To run the project:  
