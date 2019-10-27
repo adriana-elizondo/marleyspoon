@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipeListViewController" customModule="MarleySpoon" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="kmz-ju-V9j" id="Jsu-6g-OlA"/>
+                <outlet property="collectionView" destination="llV-TA-81w" id="cqi-cz-eUt"/>
+                <outlet property="view" destination="iN0-l3-epB" id="AoZ-jm-5Xk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="kmz-ju-V9j">
+                    <rect key="frame" x="197" y="443" width="20" height="20"/>
+                    <color key="color" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="llV-TA-81w">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="ljo-Pa-Mmc">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Tdn-Sc-y5X"/>
+                        <outlet property="delegate" destination="-1" id="koB-y6-TwK"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="kmz-ju-V9j" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="8FK-gI-CcK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="llV-TA-81w" secondAttribute="trailing" id="FLL-TN-dPK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="llV-TA-81w" secondAttribute="bottom" id="GsG-QK-y9U"/>
+                <constraint firstItem="kmz-ju-V9j" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="MCp-6Z-Kg9"/>
+                <constraint firstItem="llV-TA-81w" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Q0Z-8h-9WH"/>
+                <constraint firstItem="llV-TA-81w" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SDB-eW-3K4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="151.33928571428569"/>
+        </view>
+    </objects>
+</document>

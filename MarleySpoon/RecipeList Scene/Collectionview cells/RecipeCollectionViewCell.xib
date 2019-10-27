@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="z3A-ze-Pwt" customClass="RecipeCollectionViewCell" customModule="MarleySpoon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4dG-0n-SKG">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dwr-Oc-jmv">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="167"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="dwr-Oc-jmv" secondAttribute="height" multiplier="250:167" id="HCh-ji-54b"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgS-UZ-hev">
+                        <rect key="frame" x="10" y="182" width="230" height="17.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubg-ut-izg">
+                        <rect key="frame" x="10" y="275" width="230" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="wzI-HY-ppt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dwr-Oc-jmv" firstAttribute="centerX" secondItem="4dG-0n-SKG" secondAttribute="centerX" id="8Xh-pm-dUi"/>
+                    <constraint firstItem="dwr-Oc-jmv" firstAttribute="width" secondItem="4dG-0n-SKG" secondAttribute="width" id="Gcd-vR-csB"/>
+                    <constraint firstItem="OgS-UZ-hev" firstAttribute="leading" secondItem="4dG-0n-SKG" secondAttribute="leading" constant="10" id="Ndi-sD-jba"/>
+                    <constraint firstItem="ubg-ut-izg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OgS-UZ-hev" secondAttribute="bottom" constant="5" id="bSC-q0-0m3"/>
+                    <constraint firstAttribute="bottom" secondItem="ubg-ut-izg" secondAttribute="bottom" constant="5" id="dTL-xv-Syt"/>
+                    <constraint firstItem="dwr-Oc-jmv" firstAttribute="top" secondItem="4dG-0n-SKG" secondAttribute="top" id="guo-YP-VM7"/>
+                    <constraint firstAttribute="trailing" secondItem="OgS-UZ-hev" secondAttribute="trailing" constant="10" id="jq3-nK-Seg"/>
+                    <constraint firstItem="OgS-UZ-hev" firstAttribute="top" secondItem="dwr-Oc-jmv" secondAttribute="bottom" constant="15" id="p9A-o9-uKC"/>
+                    <constraint firstAttribute="trailing" secondItem="ubg-ut-izg" secondAttribute="trailing" constant="10" id="vQF-aL-i0Q"/>
+                    <constraint firstItem="ubg-ut-izg" firstAttribute="leading" secondItem="4dG-0n-SKG" secondAttribute="leading" constant="10" id="xfr-rV-l42"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <size key="customSize" width="247" height="272"/>
+            <connections>
+                <outlet property="recipeImage" destination="dwr-Oc-jmv" id="fiw-E8-78S"/>
+                <outlet property="recipeTitle" destination="OgS-UZ-hev" id="Fj1-Sx-5H8"/>
+                <outlet property="tagsLabel" destination="ubg-ut-izg" id="zrS-5V-vAZ"/>
+            </connections>
+            <point key="canvasLocation" x="-109.42028985507247" y="-52.232142857142854"/>
+        </collectionViewCell>
+    </objects>
+</document>
